@@ -33,7 +33,7 @@ Float size (TypeError):
         ...
     TypeError: size must be an integer
 
-Negative float size (TypeError according to specific requirement):
+Negative float size (TypeError):
     >>> print_square(-1.5)
     Traceback (most recent call last):
         ...
@@ -44,3 +44,9 @@ String size (TypeError):
     Traceback (most recent call last):
         ...
     TypeError: size must be an integer
+
+Missing argument (TypeError):
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
