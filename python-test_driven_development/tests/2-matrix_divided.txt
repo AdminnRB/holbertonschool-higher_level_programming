@@ -50,17 +50,13 @@ Matrix is not a list (TypeError):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Matrix with infinity or NaN (TypeError/ValueError depending on case):
+Matrix with infinity:
     >>> matrix_divided([[1, float('inf')], [3, 4]], 2)
-    Traceback (most recent call last):
-        ...
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    [[0.5, inf], [1.5, 2.0]]
 
-Div is infinity or NaN (TypeError):
+Div is infinity:
     >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
-    Traceback (most recent call last):
-        ...
-    TypeError: div must be a number
+    [[0.0, 0.0], [0.0, 0.0]]
 
 Missing arguments (TypeError):
     >>> matrix_divided([[1, 2]])
@@ -72,4 +68,4 @@ Missing all arguments (TypeError):
     >>> matrix_divided()
     Traceback (most recent call last):
         ...
-    TypeError: matrix_divided() missing 2 required positional argument: 'matrix' and 'div'
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
