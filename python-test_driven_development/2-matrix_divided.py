@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list) or len(matrix) == 0:
         raise TypeError(msg)
 
-    # 2. Hər bir elementin siyahı (row) olmasının və içinin düzgünlüyünün yoxlanılması
+    # 2. Hər bir elementin siyahı (row) olmasının yoxlanılması
     for row in matrix:
         if not isinstance(row, list) or len(row) == 0:
             raise TypeError(msg)

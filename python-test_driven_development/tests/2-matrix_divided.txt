@@ -49,3 +49,27 @@ Matrix is not a list (TypeError):
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix with infinity or NaN (TypeError/ValueError depending on case):
+    >>> matrix_divided([[1, float('inf')], [3, 4]], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Div is infinity or NaN (TypeError):
+    >>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Missing arguments (TypeError):
+    >>> matrix_divided([[1, 2]])
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing all arguments (TypeError):
+    >>> matrix_divided()
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional argument: 'matrix' and 'div'
