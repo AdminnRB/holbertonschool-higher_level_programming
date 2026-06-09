@@ -1,0 +1,39 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+Importing the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Normal string indentation:
+    >>> text_indentation("Hello. World? Python: Rocks")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    Python:
+    <BLANKLINE>
+    Rocks
+
+String with multiple spaces around punctuation:
+    >>> text_indentation("   Start.    Middle?    End:   ")
+    Start.
+    <BLANKLINE>
+    Middle?
+    <BLANKLINE>
+    End:
+    <BLANKLINE>
+
+Not a string argument (TypeError):
+    >>> text_indentation(12345)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Missing argument (TypeError):
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
