@@ -34,3 +34,15 @@ None as argument (TypeError):
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Infinity test:
+    >>> add_integer(float('inf'), 4)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+NaN test:
+    >>> add_integer(4, float('NaN'))
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
