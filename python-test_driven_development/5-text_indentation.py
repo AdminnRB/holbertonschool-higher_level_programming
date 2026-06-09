@@ -8,12 +8,12 @@ The module supplies one function, text_indentation(text).
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
-    There should be no space at the beginning or at the end of each printed line.
+    There should be no space at the beginning or at the end of each line.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # Mətnin əvvəlində və sonundakı lazımsız boşluqları başlanğıc üçün təmizləyirik
+    # Mətnin əvvəlindəki boşluqları keçirik
     c = 0
     while c < len(text) and text[c] == ' ':
         c += 1
@@ -23,7 +23,7 @@ def text_indentation(text):
         if text[c] in [".", "?", ":"]:
             print("\n")
             c += 1
-            # İşarədən sonra gələn bütün boşluqları keçirik (skip edirik)
+            # İşarədən sonra gələn boşluqları keçirik
             while c < len(text) and text[c] == ' ':
                 c += 1
             continue
