@@ -40,11 +40,9 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
         else:
             self.send_response(404)
-            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Type", "text/plain")
             self.end_headers()
-            self.wfile.write(
-                json.dumps({"error": "Endpoint not found"}).encode("utf-8")
-            )
+            self.wfile.write(b"Endpoint not found")
 
 
 if __name__ == "__main__":
