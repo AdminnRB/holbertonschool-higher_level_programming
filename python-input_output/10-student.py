@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that defines a Student class with a filterable JSON representation."""
+"""Module defining a Student class with a filterable JSON representation."""
 
 
 class Student:
